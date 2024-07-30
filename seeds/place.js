@@ -161,7 +161,7 @@ async function seedPlaces() {
         }
         return {
             ...place,
-            author: '643d36579773b789e91ef660',
+            author: '66a79acb9668c07ec6019d34',
             images: {
                 url: 'public\\images\\image-1681876521153-260851838.jpg',
                 filename: 'image-1681876521153-260851838.jpg'
