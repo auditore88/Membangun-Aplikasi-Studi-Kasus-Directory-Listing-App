@@ -10,7 +10,7 @@ npm install passport passport-local-mongoose
 npm i multer
 npm i fs
 mongosh "mongodb+srv://ariadiaditya:mZlR9yFTi0nX2RqW@yelpclone.sphszxx.mongodb.net/?retryWrites=true&w=majority&appName=yelpclone"
-db.users.find().pretty()
+db.users.find()
 node seeds/place.js
 mongod --dbpath="c:\data\db"
 nodemon app.js
