@@ -3,7 +3,11 @@ const Place = require('../models/place');
 const hereMaps = require('../utils/hereMaps');
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    ssl: true,
+  })
   .then(() => {
     console.log('terhubung ke mongodb');
   })
@@ -163,7 +167,7 @@ async function seedPlaces() {
         }
         return {
             ...place,
-            author: '66a79acb9668c07ec6019d34',
+            author: '66ab4a9814fcdf9b9a4bfc49',
             images: {
                 url: 'public\\images\\image-1681876521153-260851838.jpg',
                 filename: 'image-1681876521153-260851838.jpg'

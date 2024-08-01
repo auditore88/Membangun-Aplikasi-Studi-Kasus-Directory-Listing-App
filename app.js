@@ -15,7 +15,11 @@ const hereMaps = require('./utils/hereMaps');
 // connect to mongodb
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {
+	useNewUrlParser: true,
+  	useUnifiedTopology: true,
+  	ssl: true,
+  })
   .then(() => {
     console.log('terhubung ke mongodb');
   })

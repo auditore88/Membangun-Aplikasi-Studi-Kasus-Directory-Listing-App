@@ -9,7 +9,7 @@ npm i connect-flash
 npm install passport passport-local-mongoose
 npm i multer
 npm i fs
-mongosh "mongodb://127.0.0.1/yelp_clone"
+mongosh "mongodb+srv://ariadiaditya:mZlR9yFTi0nX2RqW@yelpclone.sphszxx.mongodb.net/?retryWrites=true&w=majority&appName=yelpclone"
 db.users.find().pretty()
 node seeds/place.js
 mongod --dbpath="c:\data\db"
