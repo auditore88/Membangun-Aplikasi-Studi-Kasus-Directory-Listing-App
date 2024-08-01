@@ -13,7 +13,7 @@ const User = require('./models/user');
 const hereMaps = require('./utils/hereMaps');
 
 // connect to mongodb
-mongoose.connect('mongodb://127.0.0.1/yelp_clone')
+mongoose.connect('mongodb+srv://ariadiaditya:lJ98zYMx9cRL3Go3@yelpclone.sphszxx.mongodb.net/?retryWrites=true&w=majority&appName=yelpclone')
 	.then((result) => {
 		console.log('connected to mongodb')
 	}).catch((err) => {
