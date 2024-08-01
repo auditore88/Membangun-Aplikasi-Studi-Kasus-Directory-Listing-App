@@ -1,13 +1,15 @@
 const mongoose = require('mongoose');
 const Place = require('../models/place');
 const hereMaps = require('../utils/hereMaps');
+require('dotenv').config();
 
-mongoose.connect('mongodb://127.0.0.1/yelp_clone')
-    .then((result) => {
-        console.log('connected to mongodb')
-    }).catch((err) => {
-        console.log(err)
-    });
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log('terhubung ke mongodb');
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 async function seedPlaces() {
     const places = [

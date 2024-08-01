@@ -13,12 +13,16 @@ const User = require('./models/user');
 const hereMaps = require('./utils/hereMaps');
 
 // connect to mongodb
-mongoose.connect('mongodb://127.0.0.1/yelp_clone')
-	.then((result) => {
-		console.log('connected to mongodb')
-	}).catch((err) => {
-		console.log(err)
-	});
+require('dotenv').config();
+
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log('terhubung ke mongodb');
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
 
 // view engine
 app.engine('ejs', ejsMate)
