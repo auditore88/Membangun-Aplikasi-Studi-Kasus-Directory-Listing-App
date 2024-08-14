@@ -1,5 +1,6 @@
 Persiapan Project di Windows
 
+npm install dotenv
 npm init -y
 npm i mongoose express ejs
 npm i method-override
